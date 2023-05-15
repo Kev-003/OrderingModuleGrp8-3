@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/AWTForms/Frame.java to edit this template
- */
 package OrderingModuleGrp8;
 
-/**
- *
- * @author hielp
- */
 public class LoginFormGrp8 extends java.awt.Frame {
 
     /**
@@ -47,12 +39,6 @@ public class LoginFormGrp8 extends java.awt.Frame {
         lblUsername.setText("Username");
 
         lblPassword.setText("Password");
-
-        txtName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNameActionPerformed(evt);
-            }
-        });
 
         btnLogin.setLabel("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -129,10 +115,6 @@ public class LoginFormGrp8 extends java.awt.Frame {
         System.exit(0);
     }//GEN-LAST:event_exitForm
 
-    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
-        
-    }//GEN-LAST:event_txtNameActionPerformed
-
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         if (txtName.getText().equals("bpsucict") && txtPass.getText().equals("12345")) {
             dispose();
@@ -154,14 +136,9 @@ public class LoginFormGrp8 extends java.awt.Frame {
         System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new LoginFormGrp8().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new LoginFormGrp8().setVisible(true);
         });
     }
 

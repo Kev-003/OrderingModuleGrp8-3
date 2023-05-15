@@ -39,65 +39,63 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label1" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
-                          <Component id="label2" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
+                          <Component id="lblName" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
+                          <Component id="lblAddress" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="textField2" min="-2" pref="278" max="-2" attributes="0"/>
-                          <Component id="textField1" min="-2" pref="278" max="-2" attributes="0"/>
+                          <Component id="txtAddress" min="-2" pref="278" max="-2" attributes="0"/>
+                          <Component id="txtName" min="-2" pref="278" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="list2" pref="105" max="32767" attributes="0"/>
-                              <Component id="label3" max="32767" attributes="0"/>
-                              <Component id="label8" alignment="0" max="32767" attributes="0"/>
+                              <Component id="listFlavor" pref="105" max="32767" attributes="0"/>
+                              <Component id="lblFlavor" max="32767" attributes="0"/>
+                              <Component id="lblItemOrder" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="list4" min="-2" pref="105" max="-2" attributes="0"/>
+                          <Component id="listOrder" min="-2" pref="105" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="label14" min="-2" pref="41" max="-2" attributes="0"/>
+                              <Component id="lblTotal" min="-2" pref="41" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="label15" min="-2" pref="54" max="-2" attributes="0"/>
+                              <Component id="lblTotalAmt" min="-2" pref="54" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="label4" alignment="0" min="-2" pref="84" max="-2" attributes="0"/>
-                              <Component id="button1" alignment="0" max="32767" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="label7" alignment="0" pref="84" max="32767" attributes="0"/>
-                                  <Component id="textField3" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="choice1" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Component id="label9" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                              <Component id="list5" max="32767" attributes="0"/>
+                              <Component id="lblPizzaSize" alignment="0" min="-2" pref="84" max="-2" attributes="0"/>
+                              <Component id="btnOrder" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lblPizzaPrice" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtPizzaPrice" alignment="0" max="32767" attributes="0"/>
+                              <Component id="cmbPizzaSize" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lblPrice" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="listPrice" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="label5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="list3" alignment="0" max="32767" attributes="0"/>
-                          <Component id="label11" pref="87" max="32767" attributes="0"/>
-                          <Component id="label12" max="32767" attributes="0"/>
-                          <Component id="label13" max="32767" attributes="0"/>
+                          <Component id="lblDrinks" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="listDrinks" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblAmtPay" pref="87" max="32767" attributes="0"/>
+                          <Component id="lblCash" max="32767" attributes="0"/>
+                          <Component id="lblChange" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="25" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="choice2" max="32767" attributes="0"/>
-                          <Component id="label6" pref="78" max="32767" attributes="0"/>
-                          <Component id="textField5" alignment="0" max="32767" attributes="0"/>
-                          <Component id="label10" alignment="0" max="32767" attributes="0"/>
-                          <Component id="textField6" alignment="0" max="32767" attributes="0"/>
-                          <Component id="textField7" alignment="0" max="32767" attributes="0"/>
-                          <Component id="textField8" alignment="0" max="32767" attributes="0"/>
+                          <Component id="cmbDrinkSize" max="32767" attributes="0"/>
+                          <Component id="lblDrinkSize" pref="78" max="32767" attributes="0"/>
+                          <Component id="txtDrinkPrice" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblDrinkPrice" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtAmt" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtCash" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtChange" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-              <Component id="button2" min="-2" pref="77" max="-2" attributes="0"/>
+              <Component id="btnPay" min="-2" pref="77" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -107,77 +105,77 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="label1" min="-2" max="-2" attributes="0"/>
-                  <Component id="textField1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblName" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtName" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="label2" min="-2" max="-2" attributes="0"/>
-                  <Component id="textField2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAddress" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtAddress" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="label3" min="-2" max="-2" attributes="0"/>
-                  <Component id="label4" min="-2" max="-2" attributes="0"/>
-                  <Component id="label5" min="-2" max="-2" attributes="0"/>
-                  <Component id="label6" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblFlavor" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPizzaSize" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblDrinks" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblDrinkSize" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="choice1" min="-2" max="-2" attributes="0"/>
-                          <Component id="choice2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="cmbPizzaSize" min="-2" max="-2" attributes="0"/>
+                          <Component id="cmbDrinkSize" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label7" min="-2" max="-2" attributes="0"/>
-                          <Component id="label10" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPizzaPrice" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblDrinkPrice" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="textField3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField5" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPizzaPrice" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtDrinkPrice" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="button1" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnOrder" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="list2" min="-2" pref="131" max="-2" attributes="0"/>
-                  <Component id="list3" min="-2" pref="107" max="-2" attributes="0"/>
+                  <Component id="listFlavor" min="-2" pref="131" max="-2" attributes="0"/>
+                  <Component id="listDrinks" min="-2" pref="107" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="label8" min="-2" max="-2" attributes="0"/>
-                  <Component id="label9" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblItemOrder" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPrice" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="list5" pref="103" max="32767" attributes="0"/>
-                      <Component id="list4" max="32767" attributes="0"/>
+                      <Component id="listPrice" pref="103" max="32767" attributes="0"/>
+                      <Component id="listOrder" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label11" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField6" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAmtPay" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtAmt" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label12" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField7" min="-2" max="-2" attributes="0"/>
-                          <Component id="button2" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCash" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCash" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnPay" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label13" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField8" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblChange" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtChange" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="label14" min="-2" max="-2" attributes="0"/>
-                  <Component id="label15" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblTotal" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblTotalAmt" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="33" max="32767" attributes="0"/>
           </Group>
@@ -185,143 +183,152 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="java.awt.Label" name="label1">
+    <Component class="java.awt.Label" name="lblName">
       <Properties>
         <Property name="text" type="java.lang.String" value="Customer Name"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="label2">
+    <Component class="java.awt.Label" name="lblAddress">
       <Properties>
         <Property name="text" type="java.lang.String" value="Address"/>
       </Properties>
     </Component>
-    <Component class="java.awt.TextField" name="textField1">
+    <Component class="java.awt.TextField" name="txtName">
     </Component>
-    <Component class="java.awt.TextField" name="textField2">
+    <Component class="java.awt.TextField" name="txtAddress">
     </Component>
-    <Component class="java.awt.Label" name="label3">
+    <Component class="java.awt.Label" name="lblFlavor">
       <Properties>
         <Property name="text" type="java.lang.String" value="Flavor"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="label4">
+    <Component class="java.awt.Label" name="lblPizzaSize">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Pizza Slice"/>
+        <Property name="text" type="java.lang.String" value="Pizza Size"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="label5">
+    <Component class="java.awt.Label" name="lblDrinks">
       <Properties>
         <Property name="text" type="java.lang.String" value="Drinks"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="label6">
+    <Component class="java.awt.Label" name="lblDrinkSize">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Drinks Size"/>
+        <Property name="text" type="java.lang.String" value="Drink Size"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="label7">
+    <Component class="java.awt.Label" name="lblPizzaPrice">
       <Properties>
         <Property name="text" type="java.lang.String" value="Pizza Price"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Button" name="button1">
+    <Component class="java.awt.Button" name="btnOrder">
       <Properties>
         <Property name="label" type="java.lang.String" value="Place your Order"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnOrderMouseClicked"/>
+      </Events>
     </Component>
-    <Component class="java.awt.List" name="list2">
+    <Component class="java.awt.List" name="listFlavor">
       <Properties>
         <Property name="name" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="&quot;&quot;" type="code"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="listFlavorItemStateChanged"/>
+      </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="list2.add(&quot;Hawaiian&quot;);&#xa;list2.add(&quot;Ham &amp; Cheese&quot;);&#xa;list2.add(&quot;Pepperoni&quot;);&#xa;list2.add(&quot;Overload&quot;);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="listFlavor.add(&quot;Hawaiian&quot;);&#xa;listFlavor.add(&quot;Ham &amp; Cheese&quot;);&#xa;listFlavor.add(&quot;Pepperoni&quot;);&#xa;listFlavor.add(&quot;Overload&quot;);"/>
       </AuxValues>
     </Component>
-    <Component class="java.awt.TextField" name="textField3">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textField3ActionPerformed"/>
-      </Events>
+    <Component class="java.awt.TextField" name="txtPizzaPrice">
     </Component>
-    <Component class="java.awt.Choice" name="choice1">
+    <Component class="java.awt.Choice" name="cmbPizzaSize">
       <Properties>
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
       <Events>
-        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="choice1ItemStateChanged"/>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="cmbPizzaSizeItemStateChanged"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="choice1.add(&quot;Small&quot;);&#xd;&#xa;choice1.add(&quot;Medium&quot;);&#xd;&#xa;choice1.add(&quot;Large&quot;);&#xd;&#xa;choice1.add(&quot;Family&quot;);"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="cmbPizzaSize.add(&quot;Small&quot;);&#xd;&#xa;cmbPizzaSize.add(&quot;Medium&quot;);&#xd;&#xa;cmbPizzaSize.add(&quot;Large&quot;);&#xd;&#xa;cmbPizzaSize.add(&quot;Family&quot;);"/>
       </AuxValues>
     </Component>
-    <Component class="java.awt.List" name="list3">
+    <Component class="java.awt.List" name="listDrinks">
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="listDrinksItemStateChanged"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new java.awt.List()"/>
-        <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="list3.add(&quot;Water&quot;);&#xa;list3.add(&quot;Sprite&quot;);&#xa;list3.add(&quot;Royal&quot;);&#xa;list3.add(&quot;Ice Tea&quot;);"/>
+        <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="listDrinks.add(&quot;Water&quot;);&#xa;listDrinks.add(&quot;Sprite&quot;);&#xa;listDrinks.add(&quot;Royal&quot;);&#xa;listDrinks.add(&quot;Ice Tea&quot;);"/>
       </AuxValues>
     </Component>
-    <Component class="java.awt.Choice" name="choice2">
+    <Component class="java.awt.Choice" name="cmbDrinkSize">
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="cmbDrinkSizeItemStateChanged"/>
+      </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="choice2.add(&quot;Regular&quot;);&#xa;choice2.add(&quot;Large&quot;);"/>
+        <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="cmbDrinkSize.add(&quot;Regular&quot;);&#xa;cmbDrinkSize.add(&quot;Large&quot;);"/>
       </AuxValues>
     </Component>
-    <Component class="java.awt.TextField" name="textField5">
+    <Component class="java.awt.TextField" name="txtDrinkPrice">
     </Component>
-    <Component class="java.awt.Label" name="label8">
+    <Component class="java.awt.Label" name="lblItemOrder">
       <Properties>
         <Property name="text" type="java.lang.String" value="Item Ordered"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="label9">
+    <Component class="java.awt.Label" name="lblPrice">
       <Properties>
         <Property name="text" type="java.lang.String" value="Price"/>
       </Properties>
     </Component>
-    <Component class="java.awt.List" name="list4">
+    <Component class="java.awt.List" name="listOrder">
     </Component>
-    <Component class="java.awt.Label" name="label10">
+    <Component class="java.awt.Label" name="lblDrinkPrice">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Drink Prize"/>
+        <Property name="text" type="java.lang.String" value="Drink Price"/>
       </Properties>
     </Component>
-    <Component class="java.awt.List" name="list5">
+    <Component class="java.awt.List" name="listPrice">
     </Component>
-    <Component class="java.awt.Label" name="label11">
+    <Component class="java.awt.Label" name="lblAmtPay">
       <Properties>
         <Property name="text" type="java.lang.String" value="Amount to Pay"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="label12">
+    <Component class="java.awt.Label" name="lblCash">
       <Properties>
         <Property name="text" type="java.lang.String" value="Given Cash"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="label13">
+    <Component class="java.awt.Label" name="lblChange">
       <Properties>
         <Property name="text" type="java.lang.String" value="Change"/>
       </Properties>
     </Component>
-    <Component class="java.awt.TextField" name="textField6">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textField6ActionPerformed"/>
-      </Events>
+    <Component class="java.awt.TextField" name="txtAmt">
     </Component>
-    <Component class="java.awt.TextField" name="textField7">
+    <Component class="java.awt.TextField" name="txtCash">
     </Component>
-    <Component class="java.awt.TextField" name="textField8">
+    <Component class="java.awt.TextField" name="txtChange">
     </Component>
-    <Component class="java.awt.Button" name="button2">
+    <Component class="java.awt.Button" name="btnPay">
       <Properties>
         <Property name="label" type="java.lang.String" value="Pay Order"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPayActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="java.awt.Label" name="label14">
+    <Component class="java.awt.Label" name="lblTotal">
       <Properties>
         <Property name="text" type="java.lang.String" value="Total"/>
       </Properties>
     </Component>
-    <Component class="java.awt.Label" name="label15">
+    <Component class="java.awt.Label" name="lblTotalAmt">
       <Properties>
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>

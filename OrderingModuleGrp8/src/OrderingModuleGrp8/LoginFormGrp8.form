@@ -94,9 +94,6 @@
     <Component class="java.awt.TextField" name="txtPass">
     </Component>
     <Component class="java.awt.TextField" name="txtName">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNameActionPerformed"/>
-      </Events>
     </Component>
     <Component class="java.awt.Button" name="btnLogin">
       <Properties>
