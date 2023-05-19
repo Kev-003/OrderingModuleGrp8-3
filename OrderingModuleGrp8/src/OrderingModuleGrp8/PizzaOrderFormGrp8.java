@@ -313,16 +313,27 @@ public class PizzaOrderFormGrp8 extends java.awt.Frame {
         String name = txtName.getText();
         String address = txtAddress.getText();
 
-        if (!name.isBlank() && !address.isBlank()) {
-            getChange();
-            errorName.setText("");
-            errorAddress.setText("");
-                  
-        } else {
+        try {
+            if (!name.isBlank() && !address.isBlank()) {
+                getChange();
+                errorName.setText("");
+                errorAddress.setText("");
+                if (getChange() < 0) {
+                    txtChange.setText("--");
+                    insufficient.setText("Insufficient Payment!");
+                } else {
+                    txtChange.setText(Integer.toString(getChange()));
+                    insufficient.setText("");
+                }
+            } else {
+                getChange();
+                errorName.setText("Name cannot be empty!");
+                errorAddress.setText("Address cannot be empty!");
+            }
+        } catch (NumberFormatException e) {
             errorName.setText("Name cannot be empty!");
             errorAddress.setText("Address cannot be empty!");
-            insufficient.setText("");       
-            
+            insufficient.setText("Enter Cash Amount!");
         }
     }//GEN-LAST:event_btnPayActionPerformed
 
@@ -342,21 +353,25 @@ public class PizzaOrderFormGrp8 extends java.awt.Frame {
             currentOrders.add(drink + " - " + drinkSize);
             priceList.add(intDrinkSizePrice);
         }
-        
+
         for (String item : currentOrders) {
-            listOrder.add(item);}
+            listOrder.add(item);
+        }
         for (int item : priceList) {
-            listPrice.add(Integer.toString(item));}
-        
-            // Clear the previous content of currentOrders
+            listPrice.add(Integer.toString(item));
+        }
+
+        // Clear the previous content of currentOrders
         currentOrders.clear();
         priceList.clear();
-        
+
         lblTotalAmt.setText(Integer.toString(getTotalPrice()));
         txtAmt.setText(Integer.toString(getTotalPrice()));
-        
+
         listFlavor.deselect(pizzaFlavorIndex);
         listDrinks.deselect(drinkIndex);
+        txtCash.setText("");
+        txtChange.setText("");
     }//GEN-LAST:event_btnOrderMouseClicked
 
     private void cmbDrinkSizeItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbDrinkSizeItemStateChanged
@@ -391,17 +406,15 @@ public class PizzaOrderFormGrp8 extends java.awt.Frame {
 
     private int getChange() {
         int sum = getTotalPrice();
-        int cash = Integer.parseInt(txtCash.getText());
-        int change = cash - sum;
-
-        if (cash < sum) {
-            txtChange.setText(Integer.toString(0));
-            insufficient.setText("Insuficient Balance!");    
-            
-        } else {
-            txtChange.setText(Integer.toString(change));
+        int cash = 0; 
+        try {
+            cash = Integer.parseInt(txtCash.getText());
             insufficient.setText("");
+        } catch (NumberFormatException e) {
+            insufficient.setText("Enter Cash Amount!");
+            return 0; // Return an appropriate value in case of an error
         }
+        int change = cash - sum;
         return change;
     }
 
@@ -412,9 +425,8 @@ public class PizzaOrderFormGrp8 extends java.awt.Frame {
     }
     //Variables declaration
     int intPizzaSizePrice = 300,
-        intDrinkSizePrice = 30;
-    
-    
+            intDrinkSizePrice = 30;
+
     private final java.util.ArrayList<String> currentOrders = new java.util.ArrayList<>();
     private final java.util.ArrayList<Integer> priceList = new java.util.ArrayList<>();
     // Variables declaration - do not modify//GEN-BEGIN:variables
