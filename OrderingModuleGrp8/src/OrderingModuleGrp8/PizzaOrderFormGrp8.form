@@ -42,20 +42,23 @@
                           <Component id="lblName" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
                           <Component id="lblAddress" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtAddress" min="-2" pref="278" max="-2" attributes="0"/>
-                          <Component id="txtName" min="-2" pref="278" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="txtName" pref="265" max="32767" attributes="0"/>
+                          <Component id="txtAddress" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="errorName" pref="147" max="32767" attributes="0"/>
+                          <Component id="errorAddress" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="listFlavor" pref="105" max="32767" attributes="0"/>
-                              <Component id="lblFlavor" max="32767" attributes="0"/>
-                              <Component id="lblItemOrder" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="listOrder" min="-2" pref="105" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="listFlavor" pref="105" max="32767" attributes="0"/>
+                          <Component id="lblFlavor" max="32767" attributes="0"/>
+                          <Component id="lblItemOrder" alignment="0" max="32767" attributes="0"/>
+                          <Component id="listOrder" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
@@ -74,7 +77,7 @@
                               <Component id="listPrice" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="lblDrinks" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="listDrinks" alignment="0" max="32767" attributes="0"/>
@@ -82,21 +85,24 @@
                           <Component id="lblCash" max="32767" attributes="0"/>
                           <Component id="lblChange" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="21" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="cmbDrinkSize" max="32767" attributes="0"/>
-                          <Component id="lblDrinkSize" max="32767" attributes="0"/>
-                          <Component id="txtDrinkPrice" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblDrinkPrice" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtAmt" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtCash" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtChange" alignment="0" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="insufficient" min="-2" pref="180" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="txtCash" min="-2" pref="78" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btnPay" min="-2" pref="77" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="cmbDrinkSize" min="-2" pref="78" max="-2" attributes="0"/>
+                          <Component id="lblDrinkSize" min="-2" pref="78" max="-2" attributes="0"/>
+                          <Component id="lblDrinkPrice" alignment="0" min="-2" pref="78" max="-2" attributes="0"/>
+                          <Component id="txtDrinkPrice" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtAmt" alignment="0" min="-2" pref="78" max="-2" attributes="0"/>
+                          <Component id="txtChange" alignment="0" min="-2" pref="78" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-              <Component id="btnPay" min="-2" pref="77" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+              <EmptySpace pref="24" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -107,11 +113,13 @@
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="lblName" min="-2" max="-2" attributes="0"/>
                   <Component id="txtName" min="-2" max="-2" attributes="0"/>
+                  <Component id="errorName" min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="lblAddress" min="-2" max="-2" attributes="0"/>
                   <Component id="txtAddress" min="-2" max="-2" attributes="0"/>
+                  <Component id="errorAddress" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -144,38 +152,43 @@
                   <Component id="listDrinks" min="-2" pref="107" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblItemOrder" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblPrice" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="listPrice" pref="103" max="32767" attributes="0"/>
-                      <Component id="listOrder" max="32767" attributes="0"/>
-                  </Group>
+              <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblAmtPay" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtAmt" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblItemOrder" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPrice" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblCash" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtCash" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnPay" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="listPrice" pref="103" max="32767" attributes="0"/>
+                              <Component id="listOrder" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblAmtPay" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtAmt" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblCash" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtCash" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnPay" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblChange" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtChange" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblChange" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtChange" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="lblTotal" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblTotalAmt" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="lblTotal" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblTotalAmt" min="-2" max="-2" attributes="0"/>
+                  <Component id="insufficient" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="33" max="32767" attributes="0"/>
           </Group>
@@ -342,6 +355,12 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
+    </Component>
+    <Component class="java.awt.Label" name="insufficient">
+    </Component>
+    <Component class="java.awt.Label" name="errorName">
+    </Component>
+    <Component class="java.awt.Label" name="errorAddress">
     </Component>
   </SubComponents>
 </Form>
