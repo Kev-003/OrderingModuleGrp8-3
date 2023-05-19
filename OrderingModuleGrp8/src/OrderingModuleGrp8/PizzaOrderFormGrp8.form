@@ -82,10 +82,10 @@
                           <Component id="lblCash" max="32767" attributes="0"/>
                           <Component id="lblChange" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                      <EmptySpace pref="21" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="cmbDrinkSize" max="32767" attributes="0"/>
-                          <Component id="lblDrinkSize" pref="78" max="32767" attributes="0"/>
+                          <Component id="lblDrinkSize" max="32767" attributes="0"/>
                           <Component id="txtDrinkPrice" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblDrinkPrice" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtAmt" alignment="0" max="32767" attributes="0"/>
@@ -244,6 +244,11 @@
       </AuxValues>
     </Component>
     <Component class="java.awt.TextField" name="txtPizzaPrice">
+      <Properties>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="String.valueOf(intPizzaSizePrice)&#xd;&#xa;" type="code"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="java.awt.Choice" name="cmbPizzaSize">
       <Properties>
@@ -274,6 +279,11 @@
       </AuxValues>
     </Component>
     <Component class="java.awt.TextField" name="txtDrinkPrice">
+      <Properties>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="String.valueOf(intDrinkSizePrice)&#xd;&#xa;" type="code"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="java.awt.Label" name="lblItemOrder">
       <Properties>

@@ -93,6 +93,9 @@ public class PizzaOrderFormGrp8 extends java.awt.Frame {
             }
         });
 
+        txtPizzaPrice.setText(String.valueOf(intPizzaSizePrice)
+        );
+
         cmbPizzaSize.setName(""); // NOI18N
         cmbPizzaSize.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -111,6 +114,9 @@ public class PizzaOrderFormGrp8 extends java.awt.Frame {
                 cmbDrinkSizeItemStateChanged(evt);
             }
         });
+
+        txtDrinkPrice.setText(String.valueOf(intDrinkSizePrice)
+        );
 
         lblItemOrder.setText("Item Ordered");
 
@@ -178,10 +184,10 @@ public class PizzaOrderFormGrp8 extends java.awt.Frame {
                             .addComponent(lblAmtPay, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
                             .addComponent(lblCash, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblChange, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(cmbDrinkSize, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblDrinkSize, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                            .addComponent(lblDrinkSize, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtDrinkPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblDrinkPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtAmt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -297,7 +303,7 @@ public class PizzaOrderFormGrp8 extends java.awt.Frame {
         if (!name.isBlank() && !address.isBlank()) {
             getChange();
         } else {
-            showNameAddressEmpty();
+            
         }
     }//GEN-LAST:event_btnPayActionPerformed
 
@@ -325,6 +331,7 @@ public class PizzaOrderFormGrp8 extends java.awt.Frame {
         
             // Clear the previous content of currentOrders
         currentOrders.clear();
+        priceList.clear();
         
         lblTotalAmt.setText(Integer.toString(getTotalPrice()));
         txtAmt.setText(Integer.toString(getTotalPrice()));
@@ -346,16 +353,12 @@ public class PizzaOrderFormGrp8 extends java.awt.Frame {
     }//GEN-LAST:event_cmbDrinkSizeItemStateChanged
 
     private void listFlavorItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_listFlavorItemStateChanged
-        strPizzaFlavor = evt.getSource().toString();
+        evt.getSource().toString();
     }//GEN-LAST:event_listFlavorItemStateChanged
 
     private void listDrinksItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_listDrinksItemStateChanged
-        strDrinks = evt.getSource().toString();
+        evt.getSource().toString();
     }//GEN-LAST:event_listDrinksItemStateChanged
-
-    private void showNameAddressEmpty() {
-        javax.swing.JOptionPane.showMessageDialog(null, "PAYMENT ERROR\nName and Address cannot be empty.", getTitle(), javax.swing.JOptionPane.ERROR_MESSAGE);
-    }
 
     private int getTotalPrice() {
         int sum = 0;
@@ -373,15 +376,11 @@ public class PizzaOrderFormGrp8 extends java.awt.Frame {
         int change = cash - sum;
 
         if (change < 0) {
-            showInsufficientCash();
+            
         } else {
             txtChange.setText(Integer.toString(change));
         }
         return change;
-    }
-
-    private void showInsufficientCash() {
-        javax.swing.JOptionPane.showMessageDialog(null, "PAYMENT ERROR\nInsufficient payment.", getTitle(), javax.swing.JOptionPane.ERROR_MESSAGE);
     }
 
     public static void main(String args[]) {
@@ -389,12 +388,11 @@ public class PizzaOrderFormGrp8 extends java.awt.Frame {
             new PizzaOrderFormGrp8().setVisible(true);
         });
     }
-
     //Variables declaration
-    String strPizzaFlavor,
-            strDrinks;
     int intPizzaSizePrice = 300,
             intDrinkSizePrice = 30;
+    
+    
     private final java.util.ArrayList<String> currentOrders = new java.util.ArrayList<>();
     private final java.util.ArrayList<Integer> priceList = new java.util.ArrayList<>();
     // Variables declaration - do not modify//GEN-BEGIN:variables
