@@ -411,8 +411,9 @@ public class PizzaOrderFormGrp8 extends java.awt.Frame {
             cash = Integer.parseInt(txtCash.getText());
             insufficient.setText("");
         } catch (NumberFormatException e) {
-            insufficient.setText("Enter Cash Amount!");
-            return 0; // Return an appropriate value in case of an error
+            insufficient.setText("Insufficient Payment");
+            txtChange.setText("--");
+       
         }
         int change = cash - sum;
         return change;
