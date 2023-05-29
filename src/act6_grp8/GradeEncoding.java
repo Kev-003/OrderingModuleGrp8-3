@@ -1,14 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package act6_grp8;
 
-/**
- *
- * @author User's
- */
-public class GradeEncoding extends javax.swing.JFrame {
+class GradeEncoding extends javax.swing.JFrame {
 
     /**
      * Creates new form GradeEncoding
@@ -42,9 +34,6 @@ public class GradeEncoding extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -70,10 +59,8 @@ public class GradeEncoding extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GradeEncoding().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new GradeEncoding().setVisible(true);
         });
     }
 

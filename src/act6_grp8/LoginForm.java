@@ -1,6 +1,6 @@
 package act6_grp8;
 
-public class LoginForm extends javax.swing.JFrame {
+class LoginForm extends javax.swing.JFrame {
 
     /**
      * Creates new form LoginForm
@@ -100,10 +100,10 @@ public class LoginForm extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         if (txtName.getText().equals("SampleUser") && txtPassword.getText().equals("abcde")) {
-            dispose();
-            showWelcomeMessage();
+            dispose(); //disposes LoginForm JFrame
+            showWelcomeMessage(); //opens welcome message dialog
         } else {
-            showInvalidLogin();
+            showInvalidLogin(); //opens inavlid login message dialog
         }
     }//GEN-LAST:event_btnLoginActionPerformed
 
@@ -124,8 +124,8 @@ public class LoginForm extends javax.swing.JFrame {
         javax.swing.JOptionPane.showMessageDialog(null, "Hello. Welcome to the Student Information System.", "Message", javax.swing.JOptionPane.INFORMATION_MESSAGE);
 
         javax.swing.SwingUtilities.invokeLater(() -> {
-            dispose();
-            StudentMenu.main(new String[0]);
+
+            StudentMenu.main(new String[0]); //opens StudentMenu once the welcome message dialog is closed
         });
     }
 
