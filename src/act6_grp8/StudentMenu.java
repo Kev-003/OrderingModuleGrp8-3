@@ -1,5 +1,6 @@
 package act6_grp8;
 
+import java.awt.Component;
 import javax.swing.table.DefaultTableModel;
 
 class StudentMenu extends javax.swing.JFrame {
@@ -56,6 +57,9 @@ class StudentMenu extends javax.swing.JFrame {
         btngrpSex = new javax.swing.ButtonGroup();
         btngrpSex.add(rbtnMale);
         btngrpSex.add(rbtnFemale);
+        jPopupTransac = new javax.swing.JPopupMenu();
+        jItemInformation = new javax.swing.JMenuItem();
+        jItemGrade = new javax.swing.JMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuTransac = new javax.swing.JMenu();
         jMenuCred = new javax.swing.JMenu();
@@ -126,7 +130,7 @@ class StudentMenu extends javax.swing.JFrame {
 
         scrllpRegistered.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        tblRegistered.setModel(new ExpandableRow(tblRegistered));
+        tblRegistered.setModel(new ExpandableRow(tblRegistered,btnRegister));
         scrllpRegistered.setViewportView(tblRegistered);
 
         javax.swing.GroupLayout jPanelStudentInfoLayout = new javax.swing.GroupLayout(jPanelStudentInfo);
@@ -260,11 +264,29 @@ class StudentMenu extends javax.swing.JFrame {
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
+        jPopupTransac.setAlignmentY(1.0F);
+        jPopupTransac.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jItemInformation.setText("Student Information");
+        jPopupTransac.add(jItemInformation);
+
+        jItemGrade.setText("Grade Encoding");
+        jPopupTransac.add(jItemGrade);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Student Information System");
-        setPreferredSize(new java.awt.Dimension(720, 680));
 
-        jMenuTransac.setText("Transaction");
+        jMenuTransac.setText("Student Information");
+        jMenuTransac.addMenuListener(new javax.swing.event.MenuListener() {
+            public void menuCanceled(javax.swing.event.MenuEvent evt) {
+            }
+            public void menuDeselected(javax.swing.event.MenuEvent evt) {
+                jMenuTransacMenuDeselected(evt);
+            }
+            public void menuSelected(javax.swing.event.MenuEvent evt) {
+                jMenuTransacMenuSelected(evt);
+            }
+        });
         jMenuBar1.add(jMenuTransac);
 
         jMenuCred.setText("Credits");
@@ -289,6 +311,14 @@ class StudentMenu extends javax.swing.JFrame {
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegisterActionPerformed
+
+    private void jMenuTransacMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenuTransacMenuSelected
+        jPopupTransac.show((Component) evt.getSource(), 0, 20);
+    }//GEN-LAST:event_jMenuTransacMenuSelected
+
+    private void jMenuTransacMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenuTransacMenuDeselected
+        jPopupTransac.setVisible(false);
+    }//GEN-LAST:event_jMenuTransacMenuDeselected
     
     public javax.swing.JButton getButton() {
         return btnRegister;
@@ -333,10 +363,13 @@ class StudentMenu extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbCampus;
     private javax.swing.JComboBox<String> cmbCollege;
     private javax.swing.JComboBox<String> cmbProgram;
+    private javax.swing.JMenuItem jItemGrade;
+    private javax.swing.JMenuItem jItemInformation;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCred;
     private javax.swing.JMenu jMenuTransac;
     private javax.swing.JPanel jPanelStudentInfo;
+    private javax.swing.JPopupMenu jPopupTransac;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblCampus;
     private javax.swing.JLabel lblCollege;
@@ -368,12 +401,11 @@ class ExpandableRow extends DefaultTableModel {
     public String[] columnNames = {"Student Number","Student Name","Program"};
     private Object[][] studentData;
     
-    public ExpandableRow(javax.swing.JTable table) {
+    public ExpandableRow(javax.swing.JTable table, javax.swing.JButton button) {
         tblmodelRegistered = new DefaultTableModel();
-        table = new javax.swing.JTable(tblmodelRegistered);
+        table.setModel(tblmodelRegistered);
         
-        StudentMenu studentMenu = new StudentMenu();
-        button = studentMenu.getButton();
+        this.button = button;
 
         // Add an ActionListener to the button
         button.addActionListener((java.awt.event.ActionEvent e) -> {
