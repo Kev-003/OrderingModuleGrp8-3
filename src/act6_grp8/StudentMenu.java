@@ -1,8 +1,5 @@
 package act6_grp8;
 
-import java.awt.Component;
-import javax.swing.table.DefaultTableModel;
-
 class StudentMenu extends javax.swing.JFrame {
 
     /**
@@ -21,42 +18,6 @@ class StudentMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanelStudentInfo = new javax.swing.JPanel();
-        lblTitle = new javax.swing.JLabel();
-        lblStudentNo = new javax.swing.JLabel();
-        lblName = new javax.swing.JLabel();
-        txtStudentNo = new javax.swing.JTextField();
-        txtLastName = new javax.swing.JTextField();
-        txtFirstName = new javax.swing.JTextField();
-        txtMiddleName = new javax.swing.JTextField();
-        lblLastName = new javax.swing.JLabel();
-        lblFirstName = new javax.swing.JLabel();
-        lblMiddleName = new javax.swing.JLabel();
-        lblAddress = new javax.swing.JLabel();
-        lblSex = new javax.swing.JLabel();
-        rbtnMale = new javax.swing.JRadioButton();
-        rbtnFemale = new javax.swing.JRadioButton();
-        lblHobbies = new javax.swing.JLabel();
-        cbInternet = new javax.swing.JCheckBox();
-        cbTV = new javax.swing.JCheckBox();
-        chChat = new javax.swing.JCheckBox();
-        cbGames = new javax.swing.JCheckBox();
-        cbCook = new javax.swing.JCheckBox();
-        cbMusic = new javax.swing.JCheckBox();
-        lblCampus = new javax.swing.JLabel();
-        cmbCampus = new javax.swing.JComboBox<>();
-        lblCollege = new javax.swing.JLabel();
-        lblProgram = new javax.swing.JLabel();
-        cmbCollege = new javax.swing.JComboBox<>();
-        cmbProgram = new javax.swing.JComboBox<>();
-        btnRegister = new javax.swing.JButton();
-        scrllpAddress = new javax.swing.JScrollPane();
-        txtAddress = new javax.swing.JTextArea();
-        scrllpRegistered = new javax.swing.JScrollPane();
-        tblRegistered = new javax.swing.JTable();
-        btngrpSex = new javax.swing.ButtonGroup();
-        btngrpSex.add(rbtnMale);
-        btngrpSex.add(rbtnFemale);
         jPopupTransac = new javax.swing.JPopupMenu();
         jItemInformation = new javax.swing.JMenuItem();
         jItemGrade = new javax.swing.JMenuItem();
@@ -64,210 +25,15 @@ class StudentMenu extends javax.swing.JFrame {
         jMenuTransac = new javax.swing.JMenu();
         jMenuCred = new javax.swing.JMenu();
 
-        jPanelStudentInfo.setPreferredSize(new java.awt.Dimension(720, 680));
-
-        lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblTitle.setText("Student Information");
-        lblTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        lblStudentNo.setText("Student No.:");
-
-        lblName.setText("Student Name:");
-
-        lblLastName.setText("Last Name");
-
-        lblFirstName.setText("First Name");
-
-        lblMiddleName.setText("Middle Name");
-
-        lblAddress.setText("Address:");
-
-        lblSex.setText("Sex:");
-
-        rbtnMale.setText("Male");
-
-        rbtnFemale.setText("Female");
-
-        lblHobbies.setText("Hobbies:");
-
-        cbInternet.setText("Browsing Internet");
-
-        cbTV.setText("Watching TV");
-
-        chChat.setText("Chatting");
-
-        cbGames.setText("Playing Games");
-
-        cbCook.setText("Cooking");
-
-        cbMusic.setText("Listening to Music");
-
-        lblCampus.setText("Campus");
-
-        cmbCampus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ABUCAY", "BAGAC", "BALANGA", "DINALUPIHAN", "MAIN", "ORANI" }));
-
-        lblCollege.setText("College");
-
-        lblProgram.setText("Program");
-
-        cmbCollege.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        cmbProgram.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        btnRegister.setText("Register");
-        btnRegister.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegisterActionPerformed(evt);
-            }
-        });
-
-        scrllpAddress.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        scrllpAddress.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-
-        txtAddress.setColumns(20);
-        txtAddress.setRows(5);
-        scrllpAddress.setViewportView(txtAddress);
-
-        scrllpRegistered.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-
-        tblRegistered.setModel(new ExpandableRow(tblRegistered,btnRegister));
-        scrllpRegistered.setViewportView(tblRegistered);
-
-        javax.swing.GroupLayout jPanelStudentInfoLayout = new javax.swing.GroupLayout(jPanelStudentInfo);
-        jPanelStudentInfo.setLayout(jPanelStudentInfoLayout);
-        jPanelStudentInfoLayout.setHorizontalGroup(
-            jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelStudentInfoLayout.createSequentialGroup()
-                .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelStudentInfoLayout.createSequentialGroup()
-                        .addGap(268, 268, 268)
-                        .addComponent(lblTitle))
-                    .addGroup(jPanelStudentInfoLayout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelStudentInfoLayout.createSequentialGroup()
-                                .addComponent(lblStudentNo)
-                                .addGap(32, 32, 32)
-                                .addComponent(txtStudentNo, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtMiddleName, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanelStudentInfoLayout.createSequentialGroup()
-                                .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblName)
-                                    .addComponent(lblAddress)
-                                    .addComponent(lblSex)
-                                    .addComponent(lblHobbies)
-                                    .addComponent(lblCampus)
-                                    .addComponent(lblCollege)
-                                    .addComponent(lblProgram))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanelStudentInfoLayout.createSequentialGroup()
-                                        .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(370, 373, Short.MAX_VALUE))
-                                    .addComponent(cmbProgram, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(jPanelStudentInfoLayout.createSequentialGroup()
-                                        .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnRegister)
-                                            .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addGroup(jPanelStudentInfoLayout.createSequentialGroup()
-                                                    .addComponent(rbtnMale)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(rbtnFemale))
-                                                .addGroup(jPanelStudentInfoLayout.createSequentialGroup()
-                                                    .addComponent(cbInternet)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(cbTV)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(chChat))
-                                                .addGroup(jPanelStudentInfoLayout.createSequentialGroup()
-                                                    .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(jPanelStudentInfoLayout.createSequentialGroup()
-                                                            .addComponent(cbCook)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(cbGames))
-                                                        .addComponent(cmbCampus, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(cbMusic))
-                                                .addComponent(cmbCollege, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(scrllpAddress)))
-                            .addComponent(scrllpRegistered))))
-                .addGap(46, 46, 46))
-            .addGroup(jPanelStudentInfoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblLastName)
-                .addGap(132, 132, 132)
-                .addComponent(lblFirstName)
-                .addGap(125, 125, 125)
-                .addComponent(lblMiddleName)
-                .addGap(93, 93, 93))
-        );
-        jPanelStudentInfoLayout.setVerticalGroup(
-            jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelStudentInfoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblStudentNo)
-                    .addComponent(txtStudentNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblName)
-                    .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMiddleName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblLastName)
-                    .addComponent(lblFirstName)
-                    .addComponent(lblMiddleName))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblAddress)
-                    .addComponent(scrllpAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblSex)
-                    .addComponent(rbtnMale)
-                    .addComponent(rbtnFemale))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbInternet)
-                    .addComponent(cbTV)
-                    .addComponent(chChat))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbGames)
-                    .addComponent(cbCook)
-                    .addComponent(cbMusic)
-                    .addComponent(lblHobbies))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCampus)
-                    .addComponent(cmbCampus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCollege)
-                    .addComponent(cmbCollege, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelStudentInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblProgram)
-                    .addComponent(cmbProgram, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnRegister)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(scrllpRegistered, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
-
         jPopupTransac.setAlignmentY(1.0F);
         jPopupTransac.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jItemInformation.setText("Student Information");
+        jItemInformation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jItemInformationActionPerformed(evt);
+            }
+        });
         jPopupTransac.add(jItemInformation);
 
         jItemGrade.setText("Grade Encoding");
@@ -276,12 +42,11 @@ class StudentMenu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Student Information System");
 
-        jMenuTransac.setText("Student Information");
+        jMenuTransac.setText("Transaction");
         jMenuTransac.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
             public void menuDeselected(javax.swing.event.MenuEvent evt) {
-                jMenuTransacMenuDeselected(evt);
             }
             public void menuSelected(javax.swing.event.MenuEvent evt) {
                 jMenuTransacMenuSelected(evt);
@@ -308,22 +73,15 @@ class StudentMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegisterActionPerformed
+    private void jItemInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jItemInformationActionPerformed
+        StudentInformation.main(new String[0]);
+        
+    }//GEN-LAST:event_jItemInformationActionPerformed
 
     private void jMenuTransacMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenuTransacMenuSelected
-        jPopupTransac.show((Component) evt.getSource(), 0, 20);
+        jPopupTransac.show(jMenuBar1, 0, 20);
     }//GEN-LAST:event_jMenuTransacMenuSelected
 
-    private void jMenuTransacMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenuTransacMenuDeselected
-        jPopupTransac.setVisible(false);
-    }//GEN-LAST:event_jMenuTransacMenuDeselected
-    
-    public javax.swing.JButton getButton() {
-        return btnRegister;
-    }
-    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -341,7 +99,7 @@ class StudentMenu extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(StudentMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
+
         //</editor-fold>
 
         /* Create and display the form */
@@ -350,67 +108,14 @@ class StudentMenu extends javax.swing.JFrame {
         });
     }
     //Variables declaration
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnRegister;
-    private javax.swing.ButtonGroup btngrpSex;
-    private javax.swing.JCheckBox cbCook;
-    private javax.swing.JCheckBox cbGames;
-    private javax.swing.JCheckBox cbInternet;
-    private javax.swing.JCheckBox cbMusic;
-    private javax.swing.JCheckBox cbTV;
-    private javax.swing.JCheckBox chChat;
-    private javax.swing.JComboBox<String> cmbCampus;
-    private javax.swing.JComboBox<String> cmbCollege;
-    private javax.swing.JComboBox<String> cmbProgram;
     private javax.swing.JMenuItem jItemGrade;
     private javax.swing.JMenuItem jItemInformation;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCred;
     private javax.swing.JMenu jMenuTransac;
-    private javax.swing.JPanel jPanelStudentInfo;
     private javax.swing.JPopupMenu jPopupTransac;
-    private javax.swing.JLabel lblAddress;
-    private javax.swing.JLabel lblCampus;
-    private javax.swing.JLabel lblCollege;
-    private javax.swing.JLabel lblFirstName;
-    private javax.swing.JLabel lblHobbies;
-    private javax.swing.JLabel lblLastName;
-    private javax.swing.JLabel lblMiddleName;
-    private javax.swing.JLabel lblName;
-    private javax.swing.JLabel lblProgram;
-    private javax.swing.JLabel lblSex;
-    private javax.swing.JLabel lblStudentNo;
-    private javax.swing.JLabel lblTitle;
-    private javax.swing.JRadioButton rbtnFemale;
-    private javax.swing.JRadioButton rbtnMale;
-    private javax.swing.JScrollPane scrllpAddress;
-    private javax.swing.JScrollPane scrllpRegistered;
-    private javax.swing.JTable tblRegistered;
-    private javax.swing.JTextArea txtAddress;
-    private javax.swing.JTextField txtFirstName;
-    private javax.swing.JTextField txtLastName;
-    private javax.swing.JTextField txtMiddleName;
-    private javax.swing.JTextField txtStudentNo;
     // End of variables declaration//GEN-END:variables
 }
 
-class ExpandableRow extends DefaultTableModel {
-    public DefaultTableModel tblmodelRegistered;
-    private final javax.swing.JButton button;
-    public String[] columnNames = {"Student Number","Student Name","Program"};
-    private Object[][] studentData;
-    
-    public ExpandableRow(javax.swing.JTable table, javax.swing.JButton button) {
-        tblmodelRegistered = new DefaultTableModel();
-        table.setModel(tblmodelRegistered);
-        
-        this.button = button;
-
-        // Add an ActionListener to the button
-        button.addActionListener((java.awt.event.ActionEvent e) -> {
-            // Handle the button click event in the other class
-            
-        });
-    }
-}
