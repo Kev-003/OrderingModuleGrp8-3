@@ -1,5 +1,6 @@
 package act6_grp8;
 
+import java.awt.event.ActionListener;
 import javax.swing.table.DefaultTableModel;
 
 class StudentInformation extends javax.swing.JFrame {
@@ -116,7 +117,10 @@ class StudentInformation extends javax.swing.JFrame {
 
         scrllpRegistered.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        tblRegistered.setModel(new ExpandableRow(tblRegistered,btnRegister));
+        studentData = new String[tblRegistered.getRowCount()][3];
+        ExpandableRow addRow = new ExpandableRow(studentData, txtFirstName.getText(), txtMiddleName.getText(), txtLastName.getText());
+        addRow.setModel(tblRegistered);
+
         scrllpRegistered.setViewportView(tblRegistered);
 
         lblMiddleName.setText("Middle Name");
@@ -154,9 +158,7 @@ class StudentInformation extends javax.swing.JFrame {
                                     .addComponent(lblProgram))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(cmbProgram, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -258,7 +260,14 @@ class StudentInformation extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        // TODO add your handling code here:
+        studentNum = txtStudentNo.getText();
+        ExpandableRow addRow = new ExpandableRow();
+        String[] rowData = {studentNum, txtFirstName.getText() + " " + txtMiddleName.getText() + " " + txtLastName.getText(), cmbProgram.getSelectedItem().toString()};
+        addRow.addRow(rowData);
+        for (int i = 0; i < tblRegistered.getRowCount(); i++) {
+            studentData[i][0] = txtStudentNo.getText();
+            studentData[i][1] = txtFirstName.getText() + " " + txtMiddleName.getText() + " " + txtLastName.getText();
+        }
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     public javax.swing.JButton getButton() {
@@ -278,15 +287,11 @@ class StudentInformation extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(StudentInformation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(StudentInformation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(StudentInformation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(StudentInformation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+
         //</editor-fold>
 
         /* Create and display the form */
@@ -294,7 +299,11 @@ class StudentInformation extends javax.swing.JFrame {
             new StudentInformation().setVisible(true);
         });
     }
-
+    
+    private String[][] studentData;
+    private String name;
+    private String studentNum;
+    private String program;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnRegister;
     private javax.swing.JCheckBox cbCook;
@@ -303,9 +312,9 @@ class StudentInformation extends javax.swing.JFrame {
     private javax.swing.JCheckBox cbMusic;
     private javax.swing.JCheckBox cbTV;
     private javax.swing.JCheckBox chChat;
-    private javax.swing.JComboBox<String> cmbCampus;
-    private javax.swing.JComboBox<String> cmbCollege;
-    private javax.swing.JComboBox<String> cmbProgram;
+    public javax.swing.JComboBox<String> cmbCampus;
+    public javax.swing.JComboBox<String> cmbCollege;
+    public javax.swing.JComboBox<String> cmbProgram;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblCampus;
     private javax.swing.JLabel lblCollege;
@@ -322,32 +331,47 @@ class StudentInformation extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbtnMale;
     private javax.swing.JScrollPane scrllpAddress;
     private javax.swing.JScrollPane scrllpRegistered;
-    private javax.swing.JTable tblRegistered;
+    public javax.swing.JTable tblRegistered;
     private javax.swing.JTextArea txtAddress;
-    private javax.swing.JTextField txtFirstName;
-    private javax.swing.JTextField txtLastName;
-    private javax.swing.JTextField txtMiddleName;
-    private javax.swing.JTextField txtStudentNo;
+    public javax.swing.JTextField txtFirstName;
+    public javax.swing.JTextField txtLastName;
+    public javax.swing.JTextField txtMiddleName;
+    public javax.swing.JTextField txtStudentNo;
     // End of variables declaration//GEN-END:variables
+
 }
 
-class ExpandableRow extends DefaultTableModel {
+final class ExpandableRow extends DefaultTableModel {
 
-    public DefaultTableModel tblmodelRegistered;
-    private final javax.swing.JButton button;
-    public String[] columnNames = {"Student Number", "Student Name", "Program"};
-    private Object[][] studentData;
+    DefaultTableModel tblmodelRegistered = new DefaultTableModel();
+    String[][] studentData;
 
-    public ExpandableRow(javax.swing.JTable table, javax.swing.JButton button) {
-        tblmodelRegistered = new DefaultTableModel();
+    public ExpandableRow(String[][] studentData, String fName, String mName, String lName, String prog) {
+        super();
+        this.studentData = new String[studentData.length][3];
+
+        String name = fName + " " + mName + " " + lName;
+
+        // Populate the array using a loop
+        for (int i = 0; i < studentData.length; i++) {
+            this.studentData[i][0] = studentData[i][0];
+            this.studentData[i][1] = name;
+            this.studentData[i][2] = studentData[i][1];
+        }
+
+        tblmodelRegistered = new DefaultTableModel(this.studentData, getColumnNames());
+    }
+
+    @Override
+    public void addRow(Object[] rowData) {
+        tblmodelRegistered.addRow(rowData);
+    }
+
+    public String[] getColumnNames() {
+        return new String[]{"Student Number", "Student Name", "Program"};
+    }
+
+    public void setModel(javax.swing.JTable table) {
         table.setModel(tblmodelRegistered);
-
-        this.button = button;
-
-        // Add an ActionListener to the button
-        button.addActionListener((java.awt.event.ActionEvent e) -> {
-            // Handle the button click event in the other class
-
-        });
     }
 }
